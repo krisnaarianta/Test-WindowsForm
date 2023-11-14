@@ -21,6 +21,20 @@ namespace WinFormsApp2
         private DataGridViewRow r;
 
 
+        public string SelectedName
+        {
+            get { return (r != null) ? r.Cells["_name"].Value.ToString() : null; }
+        }
+
+        public string SelectedAlamat
+        {
+            get { return (r != null) ? r.Cells["_alamat"].Value.ToString() : null; }
+        }
+
+        public string SelectedNoHandphone
+        {
+            get { return (r != null) ? r.Cells["_no_handphone"].Value.ToString() : null; }
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -181,10 +195,10 @@ namespace WinFormsApp2
 
         }
 
-
-
-
-
-
+        private void btn_qr_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(this);
+            f2.Show();
+        }
     }
 }

@@ -40,6 +40,7 @@
             btnDelete = new Button();
             btnLoaddata = new Button();
             dgvData = new DataGridView();
+            btn_qr = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -137,7 +138,7 @@
             // 
             // btnLoaddata
             // 
-            btnLoaddata.Location = new Point(514, 379);
+            btnLoaddata.Location = new Point(608, 379);
             btnLoaddata.Name = "btnLoaddata";
             btnLoaddata.Size = new Size(88, 37);
             btnLoaddata.TabIndex = 11;
@@ -151,18 +152,29 @@
             dgvData.Location = new Point(61, 208);
             dgvData.Name = "dgvData";
             dgvData.RowTemplate.Height = 25;
-            dgvData.Size = new Size(541, 150);
+            dgvData.Size = new Size(635, 150);
             dgvData.TabIndex = 12;
             dgvData.CellClick += dgvData_CellClick;
             dgvData.CellContentClick += dgvData_CellClick;
             dgvData.CellContentDoubleClick += dgvData_CellClick;
             dgvData.CellDoubleClick += dgvData_CellClick;
             // 
+            // btn_qr
+            // 
+            btn_qr.Location = new Point(608, 103);
+            btn_qr.Name = "btn_qr";
+            btn_qr.Size = new Size(88, 88);
+            btn_qr.TabIndex = 13;
+            btn_qr.Text = "Generate QR";
+            btn_qr.UseVisualStyleBackColor = true;
+            btn_qr.Click += btn_qr_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(649, 450);
+            ClientSize = new Size(737, 450);
+            Controls.Add(btn_qr);
             Controls.Add(dgvData);
             Controls.Add(btnLoaddata);
             Controls.Add(btnDelete);
@@ -196,5 +208,6 @@
         private Button btnDelete;
         private Button btnLoaddata;
         private DataGridView dgvData;
+        private Button btn_qr;
     }
 }
